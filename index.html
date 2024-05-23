@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Project Demo</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Audio Player Demo</title>
 </head>
 <body>
-    <h1>Welcome to My Project Demo</h1>
-    <p>This is a demonstration of my project.</p>
-    <script src="script.js"></script>
+    <h1>Audio Player Demo</h1>
+    <button onclick="playAudio('audio1')">Play Audio 1</button>
+    <button onclick="playAudio('audio2')">Play Audio 2</button>
+
+    <audio id="audio1" src="male_3_sr_141_n_sr.wav"></audio>
+    <audio id="audio2" src="male_3_sr_141_w_srwav"></audio>
+
+    <script>
+        function playAudio(id) {
+            var audio = document.getElementById(id);
+            audio.play();
+        }
+    </script>
 </body>
 </html>

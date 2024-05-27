@@ -55,40 +55,161 @@
         Psuedo-whispered datasets generated from open source voice datasets are used to train a
         voice conversion model (vocoder BigVGAN) which is both speaker and language independent. 
         Resulting model is compared to a baseline and existing solutions.</p>
-    <button onclick="playAudio('audio1')">Play Audio 1</button>
-    <button onclick="playAudio('audio2')">Play Audio 2</button>
+<!--   <button onclick="playAudio('audio1')">Play Audio 1</button>
+    <button onclick="playAudio('audio2')">Play Audio 2</button>--> 
 
     <div class="container">
         <div class="column">
-            <h2>Column 1</h2>
+            <h2>Normal Speech</h2>
             <div class="audio-container">
-                <h3>Recording 1</h3>
+                <h3>CZ-W2N</h3>
                 <audio controls>
-                    <source src="audio1.mp3" type="audio/mpeg">
+                    <source src="audio/cz/male_1_sr_145_n_sr.wav" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-container">
-                <h3>Recording 2</h3>
+                <h3>Whispered TIMIT</h3>
                 <audio controls>
-                    <source src="audio2.mp3" type="audio/mpeg">
+                    <source src="audio/wTIMIT/0005_n.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>LibriTTS</h3>
+                <audio controls>
+                    <source src="audio/libri/0035_n.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>Out Of Dataset</h3>
+                <audio controls>
+                    <source src="" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
         </div>
         <div class="column">
-            <h2>Column 2</h2>
+            <h2>Whisper/Pseudowhisper</h2>
             <div class="audio-container">
-                <h3>Recording 3</h3>
+                <h3>CZ-W2N</h3>
                 <audio controls>
-                    <source src="audio3.mp3" type="audio/mpeg">
+                    <source src="audio/cz/male_1_sr_145_w_sr.wav" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
             <div class="audio-container">
-                <h3>Recording 4</h3>
+                <h3>Whispered TIMIT</h3>
                 <audio controls>
-                    <source src="audio4.mp3" type="audio/mpeg">
+                    <source src="audio/wTIMIT/0005_w.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>LibriTTS</h3>
+                <audio controls>
+                    <source src="audio/libri/0035_n_sr_2w.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>Out Of Dataset</h3>
+                <audio controls>
+                    <source src="audio/out_of/oo_w.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <div class="column">
+            <h2>Baseline - Parallel</h2>
+            <div class="audio-container">
+                <h3>CZ-W2N</h3>
+                <audio controls>
+                    <source src="audio/cz/male_1_sr_145_w_sr_generated_par.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>Whispered TIMIT</h3>
+                <audio controls>
+                    <source src="audio/wTIMIT/0005_par.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>LibriTTS</h3>
+                <audio controls>
+                    <source src="audio/libri/0035_gen_par.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>Out Of Dataset</h3>
+                <audio controls>
+                    <source src="audio/out_of/oo_par.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <div class="column">
+            <h2>Baseline - Pseudowhisper</h2>
+            <div class="audio-container">
+                <h3>CZ-W2N</h3>
+                <audio controls>
+                    <source src="audio/cz/male_1_sr_145_w_sr_generated_pw.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>Whispered TIMIT</h3>
+                <audio controls>
+                    <source src="audio/wTIMIT/0005_pw.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>LibriTTS</h3>
+                <audio controls>
+                    <source src="audio/libri/0035_gen_pw.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>Out Of Dataset</h3>
+                <audio controls>
+                    <source src="audio/out_of/oo_pw.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        <div class="column">
+            <h2>Proposed Model</h2>
+            <div class="audio-container">
+                <h3>CZ-W2N</h3>
+                <audio controls>
+                    <source src="audio/cz/male_1_sr_145_w_sr_generated_libri.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>Whispered TIMIT</h3>
+                <audio controls>
+                    <source src="audio/wTIMIT/0005_libritts.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>LibriTTS</h3>
+                <audio controls>
+                    <source src="audio/libri/0035_gen_libri.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="audio-container">
+                <h3>Out Of Dataset</h3>
+                <audio controls>
+                    <source src="audio/out_of/oo_libri.wav" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
             </div>
